@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	
+    <!-- Bootstrap CSS -->
+	
+	    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	    <link rel="stylesheet" type="text/css" href="web.css" /> 
+
+<head>
+<title>About</title>
+	<style>
+		h1,h2,h4,p,h6{
+			font-family:Georgia;
+		}
+        h4 {
+            color:maroon;
+        }
+	</style>
+</head>
+<body>
+	<h1>Hello, world!</h1>
+	<nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
+		<a class="navbar-brand" href="#">
+			<img src="{{url_for('static',filename='theme_pics/logo.jpg')}}" style="width:40px">
+		</a>
+		<ul class="navbar-nav">
+			<li class="nav-item ">
+				<a class="nav-link" href="{{ url_for('man') }}">Home</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="{{url_for('about')}}">About</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="{{ url_for('index') }}" method="POST">Diagnosis</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="{{url_for('moreInfo')}}">More Info</a>
+			</li>
+		</ul>
+	</nav>
+	</div>
+
+	<h2 class="text-center" style="color:maroon; margin-top:40px; margin-bottom:40px ;font-family:georgia">Blood Cancer Detection</h2>
+	<div id="mot">
+		<h4 align="center">Motivation</h4>
+		<div class="container">
+			<p>
+				The main motto of this work is to detect the Leukaemia at earlier stage with the help of Image Processing techniques.
+				Leukaemia means blood cancer which is featured by uncontrolled and abnormal production of white blood cells(leukocytes) by the bone marrow in the blood.
+				Acute Lymphoblastic Leukaemia(ALL) is a type of Leukaemia which is more common in children due to its non specific nature of the symptoms and signs of ALL leads wrong diagnosis.
+				Even haematologist finds it difficult to classify the Leukaemia cells, there manual classification of blood cells is not only time consuming but also inaccurate therefore early identification of Leukaemia yields in providing the appropriate treatment to the patient.
+				And it is very necessary to detect cancer in the early stages to treat this type of cancer or any type of cancer.
+			</p>
+		</div>
+		<h4 id="intro" align="center">About Lukemia</h4>
+		<div class="container">
+			<p>
+				Blood consists of plasma, and three different types of cells and they are: White Blood Cells, Red Blood Cells and Platelets
+				and each of these performs particular task.
+				Red blood cells transport oxygen from the lungs to the tissues of the body and vice versa.
+				White blood cells help the body to fight against diseases and infections. Platelets help to clot and control bleeding.
+				Leukemia is cancer of blood cells in which number of white cells is increases numerously and those are immature cells that interfere with other blood cells, usually red blood cells and platelets.
+				Our body’s white blood cell ratio is 1000:1. It means that between 1000 red blood cells there is 1 white blood cell.
+			</p>
+			<p>
+				There are two types of white blood cells that get turn into leukemia and they are:<br>
+				<ol>
+					<li>Lymphoid cells</li>
+					<li>Myeloid cells</li>
+				</ol>
+				Leukemia that caused due to lymphoid cells is called lymphocytic or lymphoblastic leukemia and if it is caused due to myeloid cells then it is known as myelogenous or myeloid leukemia.
+				Leukemia is grouped in two ways: acute or chronic, grouped according to how fast the cells are growing.
+				The abnormal blood cells in acute leukemia are usually immature blasts (young cells) that do not work properly.
+				These cells are growing fast. Acute leukemia gets worse quickly unless it is immediately treated.
+				Young blood cells are present in chronic leukemia, but also mature functional cells are produced. Blasts are growing slowly in chronic leukemia.
+				It takes the disease longer to get worse.
+			</p>
+			There are four major forms of leukaemia. They are:
+			<ol>
+				<li>Acute lymphoblastic leukaemia (ALL)</li>
+				<li>Acute myelogenous leukaemia (AML)</li>
+				<li>Chronic lymphocytic leukaemia (CLL)</li>
+				<li>Chronic myelogenous leukaemia (CML)</li>
+
+			</ol>
+		</div>
+		<h4 id="probst" align="center">Problem Statement</h4>
+		<div class="container">
+			Blood cell segmentation and identification is a vital in the study of blood as a health indicator. A complete blood count is used to determine the state of a person’s health based on the contents of the blood in particular the white blood cells and the red blood cells. The main problem arises when massive amounts of blood samples are required to be processed by the hematologist or Medical Laboratory Technicians.
+			Leukemia is a term used for diseases in which abnormal cells divide without control and are able to invade other tissues. Leukemic cells can spread to other parts of the body through the blood and lymph systems.
+		</div>
+		<h4 id="litsur" align="center"> Literature Survey</h4>
+		<div class="container">
+			<h5 style="color:blue">Survey - I :</h5>
+			<p>
+				The paper <b>“Robust segmentation and measurements techniques of the white cells in blood microscopic images”</b> by Scotti is based on the white blood cell segmentation clustering and removal of background<br>
+				<b>Technologies Used : </b> Threshold operations and low-pass filters.<br>
+				<b>Features </b>: Automatic identification of leukocytes is performed from the microscopic images.<br>
+				<b>Limitations :</b> The adjacent leukocytes segmentation phase may be affected.<br>
+			</p>
+			<h5 style="color:blue">Survey - II :</h5>
+			The paper <b>“Automated leukocyte recognition using fuzzy divergence”</b> by ghosh deals with finding out the accurate threshold for the leukocyte segmentation.<br>
+			<b>Techniques Used :</b> Fuzzy divergence technique, Gamma, Gausian, Cauchy techniques.<br>
+			<b>Features :</b> Recognition of leukocyte and modification of thresholding is carried out.<br>
+			<b>Limitations:</b> Better recognition may be obtained when more thresholding is done in images<br>
+			<h5 style="color:blue">Survey - III :</h5>
+			The paper <b>”An automated white blood cell localization and segmentation using image arithmetic and automatic threshold”</b> by Madhloom HT, Kareem SA, Ariffin H, Zaidan AA, Alanazi HO, Zaidan BB, states that the white blood cell nuclei can be detected by using some image arithmetic operation and some image threshold operations<br>
+			<b>Techniques Used : </b> Image arithmetic operations , Image threshold operation<br>
+			<b>Features:</b> Nucleated cells are analyzed, remaining components are removed and blood cells are automatically recognized from the samples<br>
+			<b>Limitations :</b> White blood cells should be localized from large number of data sets.<br>
+		</div>
+		<h4 id="prowor" align="center">Proposed Work</h4>
+		<div class="container">
+			Various techniques have been developed by researchers to detect leukemia. One of the most used technique is <b>Convolution Neural Network (CNN)</b> It is based on computer vision in recent years.<br>
+			The differentiation of the leukocytes, the types of leucocytes may be segmented and identifies by this algorithm.<br>
+			There are a lot of algorithms that people used for image classification before CNN became popular.<br>
+			CNNs can be thought of automatic feature extractors from the image. While if we use a algorithm with pixel vector we lose a lot of spatial interaction between pixels, a CNN effectively uses adjacent pixel information to effectively down sample the image first by convolution and then uses a prediction layer at the end.<br>
+			<br />
+			<br />
+			<br />
+		</div>
+	</div>
+
+</body>
+<html>
+				

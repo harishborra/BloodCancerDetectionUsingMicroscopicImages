@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Result</title>
+
+    <meta charset="UTF-8">
+    <link href="static/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="web.css" />
+
+
+</head>
+<body>
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
+        <a class="navbar-brand" href="#">
+            <img src="{{url_for('static',filename='theme_pics/logo.jpg')}}" style="width:40px">
+        </a>
+        <ul class="navbar-nav">
+            <li class="nav-item ">
+                <a class="nav-link" href="{{ url_for('man') }}">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{{url_for('about')}}">About</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{{ url_for('index') }}" method="POST">Diagnosis</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{{url_for('moreInfo')}}">More Info</a>
+            </li>
+        </ul>
+    </nav>
+    <h1>Hello,World</h1>
+    <center>
+        <div class='cont py-3'>
+            {% if data> 0.50 %}
+            <center style="font-size:30px;color:maroon">
+                {%print("Image has detected CANCER")%}
+            </center>
+            {%else%}
+            <center style="font-size:30px;color:green">
+                {%print("Image is NORMAL")%}
+                {%endif%}
+            </center>
+        </div>
+
+    </center>
+
+</body>
+</html>

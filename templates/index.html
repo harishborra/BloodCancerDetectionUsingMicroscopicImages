@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Diagnosis</title>
+    <meta charset="UTF-8">
+    <link href="static/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="web.css" />
+    <style>
+        footer {
+            /*position:absolute;*/
+            padding-top: 10px;
+            text-align: center;
+            background-color: black;
+            color: white;
+            margin-bottom: 0;
+            bottom:0;
+            height: 5rem;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
+        <a class="navbar-brand" href="#">
+            <img src="{{url_for('static',filename='theme_pics/logo.jpg')}}" style="width:40px">
+        </a>
+        <ul class="navbar-nav">
+            <li class="nav-item ">
+                <a class="nav-link" href="{{ url_for('man') }}">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{{url_for('about')}}">About</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{{ url_for('index') }}" method="POST">Diagnosis</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{{url_for('moreInfo')}}">More Info</a>
+            </li>
+        </ul>
+    </nav>
+    <center style="padding:30px">
+        
+        <br>
+        <img src="{{url_for('static',filename='theme_pics/cancer2.jpg')}}" alt="" style="padding-top:35px; width:600px;height:350px;margin:auto" />
+        <br>
+        <br >
+        <h3 style="color:maroon">Please Upload a Microscopic Image</h3>
+        <br>
+        <form method="POST" action="{{url_for('predict')}}" enctype="multipart/form-data">
+            <input type="file" name='image' class='btn'>
+            <br>
+            <br />
+            <input type="submit" class='btn-primary'>
+        </form>
+    </center>
+    <br />
+    <br />
+    <br />
+    <footer>
+        <p>Guided by: <b>Dr. P. Aruna Kumari</b></p>
+        <p>Team: B.Harish M.Hema Latha P.Pranaya Durga B.Rhema Sravya</p>
+    </footer>
+</body>
+</html>
